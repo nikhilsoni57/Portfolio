@@ -64,7 +64,7 @@ const about = {
     },
     calendar: {
         display: true,
-        link: 'https://cal.com'
+        link: 'https://cal.com/nikhilsoni57/consultation-with-nikhil-soni'
     },
     intro: {
         display: true,
