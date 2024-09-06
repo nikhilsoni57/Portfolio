@@ -2,8 +2,21 @@
 
 import Masonry from 'react-masonry-css';
 import { SmartImage } from "@/once-ui/components";
-import { gallery } from "@/app/resources";
 import styles from "@/app/gallery/Gallery.module.scss";
+
+// Define the type for the images in the gallery
+type Image = {
+    src: string;
+    alt: string;
+    orientation: "horizontal" | "vertical";
+};
+
+// Example of a static image array (replace this with your dynamic content or remove if not needed)
+const images: Image[] = [
+    { src: '/images/sample1.jpg', alt: 'Sample Image 1', orientation: 'horizontal' },
+    { src: '/images/sample2.jpg', alt: 'Sample Image 2', orientation: 'vertical' },
+    // Add more images as needed
+];
 
 export default function MasonryGrid() {
     const breakpointColumnsObj = {
@@ -18,7 +31,7 @@ export default function MasonryGrid() {
             breakpointCols={breakpointColumnsObj}
             className={styles.masonryGrid}
             columnClassName={styles.masonryGridColumn}>
-            {gallery.images.map((image, index) => (
+            {images.map((image: Image, index: number) => (
                 <SmartImage
                     key={index}
                     radius="m"

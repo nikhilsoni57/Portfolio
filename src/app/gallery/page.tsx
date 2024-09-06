@@ -1,66 +1,36 @@
-import { Flex } from "@/once-ui/components";
-import MasonryGrid from "./components/MasonryGrid";
-import { baseURL, gallery, person } from "../resources";
+import { Flex } from "@/once-ui/components"; // Import necessary components
+import { person } from "../resources"; // Import person if you still need it for author information
 
-export function generateMetadata() {
-	const title = gallery.title;
-	const description = gallery.description;
-	const ogImage = `https://${baseURL}/og?title=${encodeURIComponent(title)}`;
-
-	return {
-		title,
-		description,
-		openGraph: {
-			title,
-			description,
-			type: 'website',
-			url: `https://${baseURL}/gallery`,
-			images: [
-				{
-					url: ogImage,
-					alt: title,
-				},
-			],
-		},
-		twitter: {
-			card: 'summary_large_image',
-			title,
-			description,
-			images: [ogImage],
-		},
-	};
-}
-
-export default function Gallery() {
+export default function ProjectsPage() {
     return (
         <Flex fillWidth>
+            {/* If you need structured data for SEO purposes */}
             <script
-				type="application/ld+json"
-				suppressHydrationWarning
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'ImageGallery',
-						name: gallery.title,
-						description: gallery.description,
-						url: `https://${baseURL}/gallery`,
-						image: gallery.images.map((image) => ({
-                            '@type': 'ImageObject',
-                            url: `${baseURL}${image.src}`,
-                            description: image.alt,
-                        })),
-						author: {
-							'@type': 'Person',
-							name: person.name,
+                type="application/ld+json"
+                suppressHydrationWarning
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        '@context': 'https://schema.org',
+                        '@type': 'CreativeWork', // Updated type to match project showcase
+                        name: "My Projects", // Static or dynamic name
+                        description: "A collection of my projects and work.",
+                        author: {
+                            '@type': 'Person',
+                            name: person.name,
                             image: {
-								'@type': 'ImageObject',
-								url: `${baseURL}${person.avatar}`,
-							},
-						},
-					}),
-				}}
-			/>
-            <MasonryGrid/>
+                                '@type': 'ImageObject',
+                                url: `${person.avatar}`,
+                            },
+                        },
+                    }),
+                }}
+            />
+            {/* Content for the page */}
+            <div>
+                <h1>Welcome to My Projects</h1>
+                <p>Here you'll find a collection of my work and projects.</p>
+                {/* Add any other content here, such as a project listing */}
+            </div>
         </Flex>
     );
 }
