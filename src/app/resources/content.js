@@ -1,35 +1,35 @@
 import { InlineCode } from "@/once-ui/components";
 
 const person = {
-    firstName: 'Selene',
-    lastName:  'Yu',
+    firstName: 'Nikhil',
+    lastName:  'Soni',
     get name() {
         return `${this.firstName} ${this.lastName}`;
     },
-    role:      'Design Engineer',
+    role:      'Service Desk Technician',
     avatar:    '/images/avatar.jpg',
-    location:  'Asia/Jakarta',        // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-    languages: ['English', 'Bahasa']  // optional: Leave the array empty if you don't want to display languages
+    location:  'Toronto',        // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+    languages: ['English', 'Hindi']  // optional: Leave the array empty if you don't want to display languages
 }
 
 const newsletter = {
     display: true,
     title: <>Subscribe to {person.firstName}'s Newsletter</>,
-    description: <>I occasionally write about design, technology, and share thoughts on the intersection of creativity and engineering.</>
+    description: <>I share insights on AI, leadership, and human connection focusing on how technology can empower leaders and foster meaningful change.</>
 }
 
 const social = [
     // Links are automatically displayed.
     // Import new icons in /once-ui/icons.ts
-    {
-        name: 'GitHub',
-        icon: 'github',
-        link: 'https://github.com/once-ui-system/nextjs-starter',
-    },
+    // {
+    //     name: 'GitHub',
+    //     icon: 'github',
+    //     link: 'https://github.com/nikhilsoni57',
+    // },
     {
         name: 'LinkedIn',
         icon: 'linkedin',
-        link: 'https://www.linkedin.com/company/once-ui/',
+        link: 'https://www.linkedin.com/in/nikhilsoni57/',
     },
     {
         name: 'X',
@@ -39,16 +39,16 @@ const social = [
     {
         name: 'Email',
         icon: 'email',
-        link: 'mailto:example@gmail.com',
+        link: 'mailto:nikhilsoni57@gmail.com',
     },
 ]
 
 const home = {
     label: 'Home',
     title: `${person.name}'s Portfolio`,
-    description: `Portfolio website showcasing my work as a ${person.role}`,
-    headline: <>Design engineer and builder</>,
-    subline: <>I'm Selene, a design engineer at <InlineCode>FLY</InlineCode>, where I craft intuitive<br/> user experiences. After hours, I build my own projects.</>
+    description: `Showcasing my journey in technology, leadership, and creative problem-solving.`,
+    headline: <>Transforming Leadership & Technology</>,
+    subline: <>I'm Nikhil, an IT professional passionate about enhancing operations through creativity, empathy, and innovation. My mission is to integrate AI and emotional intelligence into leadership to drive meaningful change in organizations.</>
 }
 
 const about = {
@@ -69,36 +69,29 @@ const about = {
     intro: {
         display: true,
         title: 'Introduction',
-        description: <>Selene is a Jakarta-based design engineer with a passion for transforming complex challenges into simple, elegant design solutions. Her work spans digital interfaces, interactive experiences, and the convergence of design and technology.</>
+        description: <>Nikhil is a Toronto-based IT professional with over 5 years of experience in enhancing operations and delivering strategic solutions. His focus lies in combining creativity, leadership, and technology to empower organizations through innovative problem-solving and emotional intelligence.</>
     },
     work: {
         display: true, // set to false to hide this section
         title: 'Work Experience',
         experiences: [
             {
-                company: 'FLY',
-                timeframe: '2022 - Present',
-                role: 'Senior Design Engineer',
+                company: 'The Salvation Army',
+                timeframe: 'Feb 2022 - Present',
+                role: 'Service Desk Technician',
                 achievements: [
-                    <>Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user engagement and 30% faster load times.</>,
-                    <>Spearheaded the integration of AI tools into design workflows, enabling designers to iterate 50% faster.</>
+                    <>Provided on-call technical support, resolving complex incidents, including network outages and server failures, reducing downtime by 20%.</>,
+                    <>Collaborated with the infrastructure team to implement Single Sign-On (SSO) for over 5,000 users, reducing IT support workload by 10+ hours per week.</>,
                 ],
-                images: [ // optional: leave the array empty if you don't want to display images
-                    {
-                        src: '/images/projects/project-01/cover-01.jpg',
-                        alt: 'Once UI Project',
-                        width: 16,
-                        height: 9
-                    }
-                ]
+                images: [ ]
             },
             {
-                company: 'Creativ3',
-                timeframe: '2018 - 2022',
-                role: 'Lead Designer',
+                company: 'Fully Managed (TELUS)',
+                timeframe: 'May 2021 - Jan 2022',
+                role: 'IT Service Desk Analyst',
                 achievements: [
-                    <>Developed a design system that unified the brand across multiple platforms, improving design consistency by 40%.</>,
-                    <>Led a cross-functional team to launch a new product line, contributing to a 15% increase in overall company revenue.</>
+                    <>Delivered IT support for healthcare facilities, improving user satisfaction by 20% through rapid resolution of EHR system failures and network issues.</>,
+                    <>Partnered with cross-functional teams to address high-priority incidents, leading to system-wide improvements and increased operational stability.</>
                 ],
                 images: [ ]
             }
@@ -109,12 +102,12 @@ const about = {
         title: 'Studies',
         institutions: [
             {
-                name: 'University of Jakarta',
-                description: <>Studied software engineering.</>,
+                name: 'Georgian College of Applied Arts & Technology',
+                description: <>Bachelor of Computer Science</>,
             },
             {
-                name: 'Build the Future',
-                description: <>Studied online marketing and personal branding.</>,
+                name: 'Co-op Experience',
+                description: <>Completed two co-op work terms, gaining hands-on experience in IT support, technical troubleshooting, and project management.</>,
             }
         ]
     },
@@ -123,34 +116,24 @@ const about = {
         title: 'Technical skills',
         skills: [
             {
-                title: 'Figma',
-                description: <>Able to prototype in Figma with Once UI with unnatural speed.</>,
-                images: [
-                    {
-                        src: '/images/projects/project-01/cover-02.jpg',
-                        alt: 'Project image',
-                        width: 16,
-                        height: 9
-                    },
-                    {
-                        src: '/images/projects/project-01/cover-03.jpg',
-                        alt: 'Project image',
-                        width: 16,
-                        height: 9
-                    },
-                ]
+                title: 'ServiceNow',
+                description: <>Skilled in ServiceNow for incident, problem, and change management, as well as creating workflows and reporting.</>,
+                images: [ ]
             },
             {
-                title: 'Next.js',
-                description: <>Building next gen apps with Next.js + Once UI + Supabase.</>,
-                images: [
-                    {
-                        src: '/images/projects/project-01/cover-04.jpg',
-                        alt: 'Project image',
-                        width: 16,
-                        height: 9
-                    },
-                ]
+                title: 'ITSM & ITOM',
+                description: <>Expert in IT Service Management (ITSM) and IT Operations Management (ITOM) following ITIL v4 practices to streamline operations and manage incidents.</>,
+                images: []
+            },
+            {
+                title: 'PowerShell & Active Directory',
+                description: <>Proficient in PowerShell scripting and managing Active Directory for user and system administration.</>,
+                images: []
+            },
+            {
+                title: 'Azure Cloud Solutions & Office 365',
+                description: <>Experienced in managing cloud infrastructure and services using Azure, and implementing Office 365 for seamless enterprise operations.</>,
+                images: []
             }
         ]
     }
@@ -172,83 +155,19 @@ const work = {
     // All projects will be listed on the /home and /work routes
 }
 
+// The gallery section has been removed as per your request.
+// If you need to add it back in the future, you can uncomment and modify the code below.
+
+/*
 const gallery = {
-    label: 'Gallery',
+    label: 'AI Art',
     title: 'My photo gallery',
     description: `A photo collection by ${person.name}`,
     // Images from https://pexels.com
     images: [
-        { 
-            src: '/images/gallery/img-01.jpg', 
-            alt: 'image',
-            orientation: 'vertical'
-        },
-        { 
-            src: '/images/gallery/img-02.jpg', 
-            alt: 'image',
-            orientation: 'horizontal'
-        },
-        { 
-            src: '/images/gallery/img-03.jpg', 
-            alt: 'image',
-            orientation: 'vertical'
-        },
-        { 
-            src: '/images/gallery/img-04.jpg', 
-            alt: 'image',
-            orientation: 'horizontal'
-        },
-        { 
-            src: '/images/gallery/img-05.jpg', 
-            alt: 'image',
-            orientation: 'horizontal'
-        },
-        { 
-            src: '/images/gallery/img-06.jpg', 
-            alt: 'image',
-            orientation: 'vertical'
-        },
-        { 
-            src: '/images/gallery/img-07.jpg', 
-            alt: 'image',
-            orientation: 'horizontal'
-        },
-        { 
-            src: '/images/gallery/img-08.jpg', 
-            alt: 'image',
-            orientation: 'vertical'
-        },
-        { 
-            src: '/images/gallery/img-09.jpg', 
-            alt: 'image',
-            orientation: 'horizontal'
-        },
-        { 
-            src: '/images/gallery/img-10.jpg', 
-            alt: 'image',
-            orientation: 'horizontal'
-        },
-        { 
-            src: '/images/gallery/img-11.jpg', 
-            alt: 'image',
-            orientation: 'vertical'
-        },
-        { 
-            src: '/images/gallery/img-12.jpg', 
-            alt: 'image',
-            orientation: 'horizontal'
-        },
-        { 
-            src: '/images/gallery/img-13.jpg', 
-            alt: 'image',
-            orientation: 'horizontal'
-        },
-        { 
-            src: '/images/gallery/img-14.jpg', 
-            alt: 'image',
-            orientation: 'horizontal'
-        },
+        // ... (image array content)
     ]
 }
+*/
 
-export { person, social, newsletter, home, about, blog, work, gallery };
+export { person, social, newsletter, home, about, blog, work };

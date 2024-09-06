@@ -61,9 +61,9 @@ export const Header = () => {
                 paddingLeft="12" fillWidth
                 alignItems="center"
                 textVariant="body-default-s">
-                { display.location && (
+                {/* { display.location && (
                     <>{person.location}</>
-                )}
+                )} */}
             </Flex>
             <Flex
                 background="surface" border="neutral-medium" borderStyle="solid-1" radius="m-4" shadow="l"
@@ -104,14 +104,15 @@ export const Header = () => {
                             <Flex paddingX="2" hide="s">{blog.label}</Flex>
                         </ToggleButton>
                     )}
-                    { routes['/gallery'] && (
+
+                    {/* { routes['/gallery'] && (
                         <ToggleButton
                             prefixIcon="gallery"
                             href="/gallery"
                             selected={pathname.startsWith('/gallery')}>
                             <Flex paddingX="2" hide="s">{gallery.label}</Flex>
                         </ToggleButton>
-                    )}
+                    )} */}
                 </Flex>
             </Flex>
             <Flex
@@ -119,9 +120,9 @@ export const Header = () => {
                 paddingRight="12" fillWidth
                 justifyContent="flex-end" alignItems="center"
                 textVariant="body-default-s">
-                { display.time && (
+                {/* { display.time && (
                     <TimeDisplay timeZone={person.location}/>
-                )}
+                )} */}
             </Flex>
         </Flex>
     )

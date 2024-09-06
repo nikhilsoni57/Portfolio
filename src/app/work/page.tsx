@@ -3,6 +3,7 @@ import { Flex } from '@/once-ui/components';
 import { Projects } from '@/app/work/components/Projects';
 import { baseURL, person, work } from '../resources';
 
+
 export function generateMetadata() {
 	const title = work.title;
 	const description = work.description;
