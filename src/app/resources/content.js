@@ -9,12 +9,12 @@ const person = {
     role:      'Service Desk Technician',
     avatar:    '/images/avatar.jpg',
     location:  'Toronto',        // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-    languages: ['English', 'Hindi']  // optional: Leave the array empty if you don't want to display languages
+    languages: []  // optional: Leave the array empty if you don't want to display languages
 }
 
 const newsletter = {
     display: true,
-    title: <>Subscribe to {person.firstName}'s Newsletter</>,
+    title: <>Subscribe to {person.firstName}&apos;s Newsletter</>,
     description: <>I share insights on AI, leadership, and human connection focusing on how technology can empower leaders and foster meaningful change.</>
 }
 

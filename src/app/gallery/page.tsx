@@ -28,7 +28,7 @@ export default function ProjectsPage() {
             {/* Content for the page */}
             <div>
                 <h1>Welcome to My Projects</h1>
-                <p>Here you'll find a collection of my work and projects.</p>
+                <p>Here you&apos;ll find a collection of my work and projects.</p>
                 {/* Add any other content here, such as a project listing */}
             </div>
         </Flex>

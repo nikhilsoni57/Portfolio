@@ -34,9 +34,10 @@
 		"@types/node": "^20",
 		"@types/react": "^18",
 		"@types/react-dom": "^18",
-		"eslint": "^9.9.1",
+		"eslint": "^8.57.0",
+		"eslint-config-next": "^14.2.8",
 		"postcss-custom-media": "^10.0.7",
 		"postcss-flexbugs-fixes": "^5.0.2",
-		"typescript": "^5"
+		"typescript": "^5.4.0"
 	}
 }

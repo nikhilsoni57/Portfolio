@@ -10,7 +10,7 @@ import { baseURL, effects, home, person, style } from '@/app/resources'
 import { Inter } from 'next/font/google'
 import { Source_Code_Pro } from 'next/font/google';
 
-import { Metadata } from "next";
+import { Metadata } from "next";4
 
 export const metadata: Metadata = {
 	metadataBase: new URL('https://' + baseURL),

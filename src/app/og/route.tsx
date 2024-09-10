@@ -1,6 +1,7 @@
 import { ImageResponse } from 'next/og'
 import { baseURL } from '@/app/resources';
 import { person } from '@/app/resources'; 
+import Image from 'next/image';
 
 export const runtime = 'edge';
 
@@ -48,7 +49,8 @@ export async function GET(request: Request) {
                             alignItems: 'center',
                             gap: '5rem'
                         }}>
-                        <img src={'https://' + baseURL + person.avatar}
+                            {/* using Image component from next/image to optimize image, also adding alt attribute */}
+                        <Image src={'https://' + baseURL + person.avatar} alt={person.name}
                             style={{
                                 width: '12rem',
                                 height: '12rem',

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef, useState, useEffect, useCallback } from 'react';
 import classNames from 'classnames';
 import { Flex } from '@/once-ui/components';
 
@@ -33,7 +33,8 @@ const Slider: React.FC<SliderProps> = ({
         setInternalValue(value);
     }, [value]);
 
-    const handleMouseMove = (event: MouseEvent) => {
+     // Use useCallback to memoize handleMouseMove to ensure stable reference
+    const handleMouseMove = useCallback((event: MouseEvent) => {
         if (!dragging || !sliderRef.current) return;
 
         const rect = sliderRef.current.getBoundingClientRect();
@@ -48,22 +49,24 @@ const Slider: React.FC<SliderProps> = ({
         newValue = Math.max(min, Math.min(max, newValue));
         setInternalValue(newValue);
         onChange(newValue);
-    };
+    }, []); // Add dependencies if needed
 
-    const handleMouseUp = () => {
+    // Use useCallback to memoize handleMouseUp to ensure stable reference
+    const handleMouseUp = useCallback(() => {
         if (step) {
             const nearestStep = Math.round(internalValue / step) * step;
             setInternalValue(nearestStep);
             onChange(nearestStep);
         }
         setDragging(false);
-    };
+    }, []);
 
     const handleMouseDown = (event: React.MouseEvent<HTMLDivElement>) => {
         setDragging(true);
         handleMouseMove(event.nativeEvent as unknown as MouseEvent);
     };
 
+    // useEffect to add and clean up event listeners, with stable dependencies
     useEffect(() => {
         if (dragging) {
             window.addEventListener('mousemove', handleMouseMove);
@@ -77,7 +80,7 @@ const Slider: React.FC<SliderProps> = ({
             window.removeEventListener('mousemove', handleMouseMove);
             window.removeEventListener('mouseup', handleMouseUp);
         };
-    }, [dragging, internalValue]);
+    }, [dragging, internalValue, handleMouseMove, handleMouseUp]);
 
     const percentage = ((internalValue - min) / (max - min)) * 100;
 

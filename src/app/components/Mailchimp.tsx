@@ -7,6 +7,7 @@ import { Background } from '@/once-ui/components/Background';
 import { useState } from 'react';
 
 
+
 function debounce<T extends (...args: any[]) => void>(func: T, delay: number): T {
     let timeout: ReturnType<typeof setTimeout>;
     return ((...args: Parameters<T>) => {
