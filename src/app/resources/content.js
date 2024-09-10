@@ -48,7 +48,7 @@ const home = {
     title: `${person.name}'s Portfolio`,
     description: `Showcasing my journey in technology, leadership, and creative problem-solving.`,
     headline: <>Transforming Leadership & Technology</>,
-    subline: <>I'm Nikhil, an IT professional passionate about enhancing operations through creativity, empathy, and innovation. My mission is to integrate AI and emotional intelligence into leadership to drive meaningful change in organizations.</>
+    subline: <>I&apos;m Nikhil, an IT professional passionate about enhancing operations through creativity, empathy, and innovation. My mission is to integrate AI and emotional intelligence into leadership to drive meaningful change in organizations.</>
 }
 
 const about = {
@@ -154,20 +154,5 @@ const work = {
     // Create new project pages by adding a new .mdx file to app/blog/posts
     // All projects will be listed on the /home and /work routes
 }
-
-// The gallery section has been removed as per your request.
-// If you need to add it back in the future, you can uncomment and modify the code below.
-
-/*
-const gallery = {
-    label: 'AI Art',
-    title: 'My photo gallery',
-    description: `A photo collection by ${person.name}`,
-    // Images from https://pexels.com
-    images: [
-        // ... (image array content)
-    ]
-}
-*/
 
 export { person, social, newsletter, home, about, blog, work };
