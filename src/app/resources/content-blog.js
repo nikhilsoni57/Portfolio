@@ -1,35 +1,33 @@
-import { InlineCode } from "@/once-ui/components";
-import Link from 'next/link'
-
 const person = {
-    firstName: 'Selene',
-    lastName:  'Yu',
+    firstName: 'Nikhil',
+    lastName:  'Soni',
     get name() {
         return `${this.firstName} ${this.lastName}`;
     },
-    role:      'Design Engineer',
+    role:      'Service Desk Technician',
     avatar:    '/images/avatar.jpg',
-    location:  'Asia/Jakarta',        // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-    languages: ['English', 'Bahasa']  // optional: Leave the array empty if you don't want to display languages
+    location:  'Toronto',        // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+    languages: []  // optional: Leave the array empty if you don't want to display languages
 }
 
 const newsletter = {
+    display: true,
     title: <>Subscribe to {person.firstName}&apos;s Newsletter</>,
-    description: <>I occasionally write about design, technology, and share thoughts on the intersection of creativity and engineering.</>
+    description: <>I share insights on AI, leadership, and human connection focusing on how technology can empower leaders and foster meaningful change.</>
 }
 
 const social = [
     // Links are automatically displayed.
     // Import new icons in /once-ui/icons.ts
-    {
-        name: 'GitHub',
-        icon: 'github',
-        link: 'https://github.com/once-ui-system/nextjs-starter',
-    },
+    // {
+    //     name: 'GitHub',
+    //     icon: 'github',
+    //     link: 'https://github.com/nikhilsoni57',
+    // },
     {
         name: 'LinkedIn',
         icon: 'linkedin',
-        link: 'https://www.linkedin.com/company/once-ui/',
+        link: 'https://www.linkedin.com/in/nikhilsoni57/',
     },
     {
         name: 'X',
@@ -39,16 +37,16 @@ const social = [
     {
         name: 'Email',
         icon: 'email',
-        link: 'mailto:example@gmail.com',
+        link: 'mailto:nikhilsoni57@gmail.com',
     },
 ]
 
 const home = {
     label: 'Home',
-    title: `${person.name}'s Portfolio`,
-    description: `Portfolio website showcasing my work as a ${person.role}`,
-    headline: <>Design engineer and builder</>,
-    subline: <>I&apos;m Selene, a design engineer at <InlineCode>FLY</InlineCode>, where I craft intuitive user experiences. After hours, I build my own projects.</>
+    title: `${person.name}&apos;s Portfolio`,
+    description: `Showcasing my journey in technology, leadership, and creative problem-solving.`,
+    headline: <>Transforming Leadership & Technology</>,
+    subline: <>I&apos;m Nikhil, an IT professional passionate about enhancing operations through creativity, empathy, and innovation. My mission is to integrate AI and emotional intelligence into leadership to drive meaningful change in organizations.</>
 }
 
 const about = {
@@ -56,105 +54,84 @@ const about = {
     title: 'About me',
     description: `Meet ${person.name}, ${person.role} from ${person.location}`,
     tableOfContent: {
-        display: false,
-        subItems: false
+        display: true,
+        subItems: true
     },
     avatar: {
-        display: false
+        display: true
     },
     calendar: {
-        display: false,
-        link: 'https://cal.com'
+        display: true,
+        link: 'https://cal.com/nikhilsoni57/consultation-with-nikhil-soni'
     },
     intro: {
         display: true,
         title: 'Introduction',
-        description: 
-        <>
-            <p>Selene is a Jakarta-based design engineer with a passion for transforming complex challenges into simple, elegant design solutions. Her work spans digital interfaces, interactive experiences, and the convergence of design and technology.</p>
-            <p>My work spans a diverse range of disciplines, from crafting <Link href="/work">intuitive digital interfaces</Link> to designing immersive interactive experiences. I&apos;m particularly interested in the intersection of design and engineering, where aesthetics meet functionality. I believe that the best solutions arise from a balance of creativity and technical rigor, and I enjoy the challenge of finding that balance in every project I undertake.</p>
-        </>
+        description: <>Nikhil is a Toronto-based IT professional with over 5 years of experience in enhancing operations and delivering strategic solutions. His focus lies in combining creativity, leadership, and technology to empower organizations through innovative problem-solving and emotional intelligence.</>
     },
     work: {
-        display: false, // set to false to hide this section
+        display: true, // set to false to hide this section
         title: 'Work Experience',
         experiences: [
             {
-                company: 'FLY',
-                timeframe: '2022 - Present',
-                role: 'Senior Design Engineer',
+                company: 'The Salvation Army',
+                timeframe: 'Feb 2022 - Present',
+                role: 'Service Desk Technician',
                 achievements: [
-                    <>Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user engagement and 30% faster load times.</>,
-                    <>Spearheaded the integration of AI tools into design workflows, enabling designers to iterate 50% faster.</>
+                    <>Provided on-call technical support, resolving complex incidents, including network outages and server failures, reducing downtime by 20%.</>,
+                    <>Collaborated with the infrastructure team to implement Single Sign-On (SSO) for over 5,000 users, reducing IT support workload by 10+ hours per week.</>,
                 ],
-                images: [ // optional: leave the array empty if you don't want to display images
-                    {
-                        src: '/images/projects/project-01/cover-01.jpg',
-                        alt: 'Once UI Project',
-                        width: 16,
-                        height: 9
-                    }
-                ]
+                images: [ ]
             },
             {
-                company: 'Creativ3',
-                timeframe: '2018 - 2022',
-                role: 'Lead Designer',
+                company: 'Fully Managed (TELUS)',
+                timeframe: 'May 2021 - Jan 2022',
+                role: 'IT Service Desk Analyst',
                 achievements: [
-                    <>Developed a design system that unified the brand across multiple platforms, improving design consistency by 40%.</>,
-                    <>Led a cross-functional team to launch a new product line, contributing to a 15% increase in overall company revenue.</>
+                    <>Delivered IT support for healthcare facilities, improving user satisfaction by 20% through rapid resolution of EHR system failures and network issues.</>,
+                    <>Partnered with cross-functional teams to address high-priority incidents, leading to system-wide improvements and increased operational stability.</>
                 ],
                 images: [ ]
             }
         ]
     },
     studies: {
-        display: false, // set to false to hide this section
+        display: true, // set to false to hide this section
         title: 'Studies',
         institutions: [
             {
-                name: 'University of Jakarta',
-                description: <>Studied software engineering.</>,
+                name: 'Georgian College of Applied Arts & Technology',
+                description: <>Bachelor of Computer Science</>,
             },
             {
-                name: 'Build the Future',
-                description: <>Studied online marketing and personal branding.</>,
+                name: 'Co-op Experience',
+                description: <>Completed two co-op work terms, gaining hands-on experience in IT support, technical troubleshooting, and project management.</>,
             }
         ]
     },
     technical: {
-        display: false, // set to false to hide this section
+        display: true, // set to false to hide this section
         title: 'Technical skills',
         skills: [
             {
-                title: 'Figma',
-                description: <>Able to prototype in Figma with Once UI with unnatural speed.</>,
-                images: [
-                    {
-                        src: '/images/projects/project-01/cover-02.jpg',
-                        alt: 'Project image',
-                        width: 16,
-                        height: 9
-                    },
-                    {
-                        src: '/images/projects/project-01/cover-03.jpg',
-                        alt: 'Project image',
-                        width: 16,
-                        height: 9
-                    },
-                ]
+                title: 'ServiceNow',
+                description: <>Skilled in ServiceNow for incident, problem, and change management, as well as creating workflows and reporting.</>,
+                images: [ ]
             },
             {
-                title: 'Next.js',
-                description: <>Building next gen apps with Next.js + Once UI + Supabase.</>,
-                images: [
-                    {
-                        src: '/images/projects/project-01/cover-04.jpg',
-                        alt: 'Project image',
-                        width: 16,
-                        height: 9
-                    },
-                ]
+                title: 'ITSM & ITOM',
+                description: <>Expert in IT Service Management (ITSM) and IT Operations Management (ITOM) following ITIL v4 practices to streamline operations and manage incidents.</>,
+                images: []
+            },
+            {
+                title: 'PowerShell & Active Directory',
+                description: <>Proficient in PowerShell scripting and managing Active Directory for user and system administration.</>,
+                images: []
+            },
+            {
+                title: 'Azure Cloud Solutions & Office 365',
+                description: <>Experienced in managing cloud infrastructure and services using Azure, and implementing Office 365 for seamless enterprise operations.</>,
+                images: []
             }
         ]
     }
@@ -162,7 +139,7 @@ const about = {
 
 const blog = {
     label: 'Blog',
-    title: 'Writing about design and tech...',
+    title: 'Empowering Change Through Technology...',
     description: `Read what ${person.name} has been up to recently`
     // Create new blog posts by adding a new .mdx file to app/blog/posts
     // All posts will be listed on the /blog route

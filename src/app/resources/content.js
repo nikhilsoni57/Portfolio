@@ -1,5 +1,3 @@
-import { InlineCode } from "@/once-ui/components";
-
 const person = {
     firstName: 'Nikhil',
     lastName:  'Soni',
@@ -45,7 +43,7 @@ const social = [
 
 const home = {
     label: 'Home',
-    title: `${person.name}'s Portfolio`,
+    title: `${person.name}&apos;s Portfolio`,
     description: `Showcasing my journey in technology, leadership, and creative problem-solving.`,
     headline: <>Transforming Leadership & Technology</>,
     subline: <>I&apos;m Nikhil, an IT professional passionate about enhancing operations through creativity, empathy, and innovation. My mission is to integrate AI and emotional intelligence into leadership to drive meaningful change in organizations.</>
@@ -141,7 +139,7 @@ const about = {
 
 const blog = {
     label: 'Blog',
-    title: 'Writing about design and tech...',
+    title: 'Empowering Change Through Technology...',
     description: `Read what ${person.name} has been up to recently`
     // Create new blog posts by adding a new .mdx file to app/blog/posts
     // All posts will be listed on the /blog route
