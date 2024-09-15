@@ -1,3 +1,5 @@
+import React from 'react';
+
 const person = {
     firstName: 'Nikhil',
     lastName:  'Soni',
@@ -43,7 +45,7 @@ const social = [
 
 const home = {
     label: 'Home',
-    title: `${person.name}&apos;s Portfolio`,
+    title: `${person.name}'s Portfolio`,
     description: `Showcasing my journey in technology, leadership, and creative problem-solving.`,
     headline: <>Transforming Leadership & Technology</>,
     subline: <>I&apos;m Nikhil, an IT professional passionate about enhancing operations through creativity, empathy, and innovation. My mission is to integrate AI and emotional intelligence into leadership to drive meaningful change in organizations.</>

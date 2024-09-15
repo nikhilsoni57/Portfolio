@@ -72,14 +72,16 @@ function LetterFx({ children, trigger = 'hover', speed = 'medium', onTrigger }: 
 	const [hasAnimated, setHasAnimated] = useState<boolean>(false);
 	const originalText = useRef<string>(typeof children === 'string' ? children : '');
 
-	const eventHandler = useCallback(createEventHandler(
-		originalText.current,
-		setText,
-		inProgress,
-		setInProgress,
-		speed,
-		trigger === 'instant' ? setHasAnimated : undefined
-	), [inProgress, trigger, speed]);
+	const eventHandler = useCallback(() => {
+		return createEventHandler(
+			originalText.current,
+			setText,
+			inProgress,
+			setInProgress,
+			speed,
+			trigger === 'instant' ? setHasAnimated : undefined
+		);
+	}, [inProgress, trigger, speed]);
 
 	useEffect(() => {
 		if (typeof children === 'string') {

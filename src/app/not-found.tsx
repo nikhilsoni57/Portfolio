@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { Flex, Heading, Text } from "@/once-ui/components";
 
 export default function NotFound() {

@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { getPosts } from '@/app/utils';
 import { Flex } from '@/once-ui/components';
 import { Projects } from '@/app/work/components/Projects';

@@ -1,9 +1,12 @@
+import React from 'react';
+
 import { notFound } from 'next/navigation'
 import { CustomMDX } from '@/app/components/mdx'
 import { formatDate, getPosts } from '@/app/utils'
 import { Avatar, Button, Flex, Heading, Text } from '@/once-ui/components'
 
 import { person, baseURL } from '@/app/resources'
+// import { constants } from 'fs/promises'; 
 
 interface BlogParams {
     params: {
@@ -12,7 +15,7 @@ interface BlogParams {
 }
 
 export async function generateStaticParams() {
-	let posts = getPosts(['src', 'app', 'blog', 'posts'])
+	const posts = getPosts(['src', 'app', 'blog', 'posts'])
 
 	return posts.map((post) => ({
 		slug: post.slug,
@@ -20,19 +23,19 @@ export async function generateStaticParams() {
 }
 
 export function generateMetadata({ params }: BlogParams) {
-	let post = getPosts(['src', 'app', 'blog', 'posts']).find((post) => post.slug === params.slug)
+	const post = getPosts(['src', 'app', 'blog', 'posts']).find((post) => post.slug === params.slug)
 
 	if (!post) {
 		return
 	}
 
-	let {
+	const {
 		title,
 		publishedAt: publishedTime,
 		summary: description,
 		image,
 	} = post.metadata;
-	let ogImage = image
+	const ogImage = image
 		? `https://${baseURL}${image}`
 		: `https://${baseURL}/og?title=${title}`;
 
@@ -61,7 +64,7 @@ export function generateMetadata({ params }: BlogParams) {
 }
 
 export default function Blog({ params }: BlogParams) {
-	let post = getPosts(['src', 'app', 'blog', 'posts']).find((post) => post.slug === params.slug)
+	const post = getPosts(['src', 'app', 'blog', 'posts']).find((post) => post.slug === params.slug)
 
 	if (!post) {
 		notFound()

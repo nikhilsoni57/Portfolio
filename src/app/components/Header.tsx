@@ -1,13 +1,15 @@
 "use client";
 
+import React from 'react';
+
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 import { Flex, ToggleButton } from "@/once-ui/components"
 import styles from '@/app/components/Header.module.scss'
 
-import { routes, display } from '@/app/resources'
-import { person, home, about, blog, work } from '@/app/resources'
+import { routes } from '@/app/resources'
+import { home, about, blog, work } from '@/app/resources'
 
 type TimeDisplayProps = {
     timeZone: string;

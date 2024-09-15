@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { formatDate, getPosts } from '@/app/utils';
 import { Flex, Grid, Heading, SmartLink, Text } from '@/once-ui/components';
 import styles from '@/app/blog/components/Posts.module.scss';
@@ -11,7 +13,7 @@ export function Posts({
     range,
     columns = '1'
 }: PostsProps) {
-    let allBlogs = getPosts(['src', 'app', 'blog', 'posts']);
+    const allBlogs = getPosts(['src', 'app', 'blog', 'posts']);
 
     const sortedBlogs = allBlogs.sort((a, b) => {
         return new Date(b.metadata.publishedAt).getTime() - new Date(a.metadata.publishedAt).getTime();

@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { Flex, IconButton, SmartLink, Text } from "@/once-ui/components"
 import { person, social } from '@/app/resources'
 

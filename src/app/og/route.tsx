@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { ImageResponse } from 'next/og'
 import { baseURL } from '@/app/resources';
 import { person } from '@/app/resources'; 

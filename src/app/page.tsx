@@ -4,8 +4,10 @@ import { Heading, Flex, Text, Button,  Avatar, RevealFx } from '@/once-ui/compon
 import { Projects } from '@/app/work/components/Projects';
 
 import { about, baseURL, home, newsletter, person, routes } from '@/app/resources'
-import { Mailchimp, ProjectCard } from '@/app/components';
+import { Mailchimp } from '@/app/components';
 import { Posts } from '@/app/blog/components/Posts';
+
+import ParentComponent from '@/once-ui/components/ParentComponent';
 
 export function generateMetadata() {
 	const title = home.title;
@@ -122,6 +124,7 @@ export default function Home() {
 			{ newsletter.display &&
 				<Mailchimp/>
 			}
+			<ParentComponent />
 		</Flex>
 	);
 }

@@ -1,3 +1,22 @@
 {
-  "extends": "next/core-web-vitals"
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+      "next/core-web-vitals",
+      "plugin:react/recommended",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:react-hooks/recommended"
+  ],
+  "plugins": [
+      "react",
+      "@typescript-eslint",
+      "react-hooks"
+  ],
+  "rules": {
+      // Your custom rules
+  },
+  "settings": {
+      "react": {
+          "version": "detect"
+      }
+  }
 }

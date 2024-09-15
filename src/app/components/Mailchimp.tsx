@@ -1,5 +1,7 @@
 "use client";
 
+import React from 'react';
+
 import { mailchimp } from '@/app/resources'
 import { newsletter } from '@/app/resources'
 import { Button, Flex, Heading, Input, Text } from '@/once-ui/components';
@@ -19,7 +21,9 @@ function debounce<T extends (...args: any[]) => void>(func: T, delay: number): T
 export const Mailchimp = () => {
     const [email, setEmail] = useState<string>('');
     const [error, setError] = useState<string>('');
-    const [touched, setTouched] = useState<boolean>(false);
+
+    // Removed unused 'touched' state
+    //   const [touched, setTouched] = useState<boolean>(false);
 
     const validateEmail = (email: string): boolean => {
         if (email === '') {
@@ -44,7 +48,8 @@ export const Mailchimp = () => {
     const debouncedHandleChange = debounce(handleChange, 2000);
 
     const handleBlur = () => {
-        setTouched(true);
+        // Removed setting 'touched' state
+        // setTouched(true);
         if (!validateEmail(email)) {
             setError('Please enter a valid email address.');
         }

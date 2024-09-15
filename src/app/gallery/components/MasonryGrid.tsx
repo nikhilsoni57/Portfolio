@@ -1,5 +1,7 @@
 "use client";
 
+import React from 'react';
+
 import Masonry from 'react-masonry-css';
 import { SmartImage } from "@/once-ui/components";
 import styles from "@/app/gallery/Gallery.module.scss";

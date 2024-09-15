@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { Flex } from "@/once-ui/components"; // Import necessary components
 import { person } from "../resources"; // Import person if you still need it for author information
 

@@ -49,7 +49,7 @@ const Slider: React.FC<SliderProps> = ({
         newValue = Math.max(min, Math.min(max, newValue));
         setInternalValue(newValue);
         onChange(newValue);
-    }, []); // Add dependencies if needed
+    }, [dragging, max, min, onChange, step]); // Added missing dependencies
 
     // Use useCallback to memoize handleMouseUp to ensure stable reference
     const handleMouseUp = useCallback(() => {
@@ -59,7 +59,7 @@ const Slider: React.FC<SliderProps> = ({
             onChange(nearestStep);
         }
         setDragging(false);
-    }, []);
+    }, [internalValue, onChange, step]); // Added missing dependencies
 
     const handleMouseDown = (event: React.MouseEvent<HTMLDivElement>) => {
         setDragging(true);
