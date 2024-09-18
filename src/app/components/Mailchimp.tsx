@@ -45,7 +45,7 @@ export const Mailchimp = () => {
         }
     };
 
-    const debouncedHandleChange = debounce(handleChange, 2000);
+    const debouncedHandleChange = debounce<React.ChangeEventHandler<HTMLInputElement>>(handleChange, 2000);
 
     const handleBlur = () => {
         // Removed setting 'touched' state
