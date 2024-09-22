@@ -55,6 +55,31 @@ You try pre-built designs by changing the imports for the config and content in 
 - Generate and display social links automatically
 - Set up password protection for URLs
 
+# **Important Notes**
+
+## ESLint Configuration
+- **ESLint is currently disabled** to facilitate development and avoid errors during deployment.
+- The `.eslintignore` file has been configured to ignore all files by including the line:
+  ```
+  *
+  ```
+- The `"lint"` script has been temporarily removed from the `package.json` file to prevent accidental linting during development. The relevant section in `package.json` was modified as follows:
+  ```json
+  "scripts": {
+      "dev": "next dev",
+      "export": "next export",
+      "build": "next build",
+      "start": "next start"
+      // "lint": "next lint" // This line has been commented out or removed
+  }
+  ```
+- To re-enable ESLint, remove the `*` line from the `.eslintignore` file and restore the `"lint"` script in `package.json`.
+- **Updated ESLint Rules**: The following ESLint rules have been disabled to prevent errors during development:
+  - `@typescript-eslint/no-explicit-any`
+  - `react/prop-types`
+  - `prefer-const`
+  - `@typescript-eslint/no-unused-vars`
+
 # **Authors**
 
 Connect with us on X or LinkedIn.
